@@ -10,4 +10,4 @@ Aquí planteo el curso de física moderna cursado el semestre de otoño 2026 con
 
 ----------------------------
 > [!ABSTRACT] Programa
-> ![[Programa_Moderna.pdf]]
+> ![[Programa-Moderna.pdf]]
