@@ -1,7 +1,7 @@
 ---
 title: Joaquín Riquelme Ponce
 ---
-# Welcome to my portafolio
+# Welcome to my portfolio
 
 I'm a 4 year applied physics student. I'm going to be using this space to publish about my studies, my notes related to the courses im currently taking, and such.
 
