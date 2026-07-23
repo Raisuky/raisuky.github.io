@@ -268,3 +268,39 @@ $$
 E_{n} =  \left( \hbar \omega\left( n+\frac{1}{2} \right) - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}\right)
 $$
 la cual es prácticamente la misma energía del oscilador armónico cuántico, pero con un desplazamiento.
+
+### Problema 7
+![[Pasted image 20260723183728.png]]
+
+Comencemos planteando el Hamiltoniano como
+$$\hat{H} = \hat{H}_{x} + \hat{H}_{y}$$
+con $\hat{H}_{x} = \frac{\hat{p}_{x}}{2m} + \frac{1}{2} m\omega_{x}^{2}\hat{x}^{2}$  y  $\hat{H}_{y}=\frac{\hat{p}_{y}}{2m} + \frac{1}{2}m\omega_{y}^{2} \hat{y}^{2}$. 
+Para usar la ecuación de autovalores, primero tenemos que definir la ecuación de onda $\Psi(x,y) = \psi(x)_{nx}\psi(y)_{ny}$Usando la ecuación de autovalores
+$$
+\begin{align}
+\hat{H}\Psi &= E \psi\\[10pt] 
+\hat{H}\psi &=(\hat{H}_{x}+\hat{H}_{y})\psi(x)_{nx}\psi(y)_{ny}\\[10pt] 
+\end{align}
+$$
+Como $\hat{H}_{x}\psi$  y $\hat{H}_{y}\psi$  tienen autoestados de la energía del QHO
+$$
+\begin{align}
+\hat{H} \Psi &= \left(\hbar \omega_{x}\left( n_{x}+\frac{1}{2} \right) +  \hbar \omega_{y}\left( n_{y}+\frac{1}{2} \right) \right) \psi(x)_{nx}\psi(y)_{ny}
+\end{align}
+$$
+si $\omega_{x} = \omega_{y}$ llegamos a la siguiente expresión
+$$
+\begin{align}
+\hat{H}\Psi= \left( \hbar\omega \left( n_{x}+n_{y}+1 \right) \right) \psi(x)_{nx}\psi(y)_{ny} \\[10pt] 
+\hat{H}\Psi= \left( \hbar\omega \left( N+1 \right) \right) \psi(x)_{nx}\psi(y)_{ny}
+\end{align}
+$$
+donde $N=n_{y}+n_{x}$
+con esto, podemos ver en el estado fundamental $N=0$, la energía es $\hbar \omega$ y no hay degeneración, mientras que cuando tenemos $N=1$ por $n_{x}=1, n_{y}=0$ o el caso inverso, $n_{x}=0, n_{y}=1$ tenemos el mismo nivel de energía $E_{n_{x},n_{y}}= 2\hbar \omega$.
+Para el caso de $\omega_{x} \neq \omega_{y}$  
+$$
+\begin{align}
+\hat{H} \Psi &= \left(\hbar \omega_{x}\left( n_{x}+\frac{1}{2} \right) +  \hbar \omega_{y}\left( n_{y}+\frac{1}{2} \right) \right) \psi(x)_{nx}\psi(y)_{ny}
+\end{align}
+$$
+y los estados de energía se "mueven" individualmente.
