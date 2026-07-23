@@ -197,7 +197,7 @@ Si evaluamos en cero
 $$
 \psi_{n}(0) \propto H_{n}(0)e^{0} =0
 $$
-por la recurrencia y paridad de los polinomios de Hermite donde todos los términos pares dependen del primer término par $H_{0}$, donde ninguno de los polinomios de Hermite pares $H_{2k}$ son cero en el origen, así incumpliendo nuestra condición de contorno. Por lo tanto, podemos deducir/concluir que todos los estados pares de la función de onda son cero. Asimismo, el subconjunto de soluciones es $n=1,3,5,7\dots$ con $n=2k+1, \forall k=0, 1,2,3\dots$
+por la recurrencia y paridad de los polinomios de Hermite donde todos los términos pares dependen del primer término par $H_{0}$, donde ninguno de los polinomios de Hermite pares $H_{2k}$ son cero en el origen, así incumpliendo nuestra condición de contorno. Por lo tanto, podemos concluir que todos los estados pares de la función de onda **se descartan**. Asimismo, el subconjunto de soluciones es $n = 1, 3, 5, 7 \dots$ con $n = 2k + 1, \forall k = 0, 1, 2, 3 \dots$
 
 Ahora, para escribir los niveles de energía usamos la ec. de la energía del oscilador armónico cuántico $E=\hbar \omega\left( n+\frac{1}{2} \right)$:
 $$
