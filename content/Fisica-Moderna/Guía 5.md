@@ -66,3 +66,75 @@ con esto podemos escribir la función de onda en base del QHO quantum harmonic o
 $$
 \Psi(x,0)  = \frac{1}{5} (3 \psi_{0}- 2\sqrt{ 2 }\psi_{1} + \sqrt{ 8} \psi_{3} )
 $$
+### Problema 3
+![[Pasted image 20260722224318.png]]
+Determinando la esperanza de $\hat{p}$
+$$
+\langle \hat{p} \rangle = \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \int_{-\infty}^\infty xe^{-m\omega x^2/2\hbar} (-i\hbar D_{x}(xe^{-m\omega x^2/2\hbar})) dx
+$$
+$$
+D_{x}(xe^{-m\omega x^2/2\hbar}) = e^{-m\omega x^2/2\hbar}(1 - 2x^2 \frac{m\omega}{2\hbar} )
+$$
+$$
+\langle\hat{p}\rangle = \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \int_{-\infty}^\infty xe^{-m\omega x^2/\hbar} (1 - 2x^2 \frac{m\omega}{2\hbar} ) dx
+$$
+$$
+\langle\hat{p}\rangle = 0  \leftarrow \text{por paridad de la función en la integral.}
+$$
+Determinando la esperanza de $\hat{p}^2$
+$$
+\langle \hat{p}^2 \rangle = \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2}
+
+\int_{-\infty}^\infty xe^{-m\omega x^2/2\hbar} (-\hbar^2 D_{x}^2(xe^{-m\omega x^2/2\hbar})) dx
+$$
+del cálculo anterior
+$$
+D_{x}(xe^{-m\omega x^2/2\hbar}) = e^{-m\omega x^2/2\hbar}(1 - 2x^2 \frac{m\omega}{2\hbar} )
+$$
+$$
+D_{x}^2 (xe^{-m\omega x^2/2\hbar})= 
+e^{-m\omega x^2/2\hbar} \left( -2x\frac{m\omega}{\hbar} 
+- 4x \frac{m\omega}{2\hbar} 
++ 4x^3 \left( \frac{m\omega}{2\hbar} \right)^2 \right) = e^{-m\omega x^2/2\hbar} \left( 4x^3 (\frac{m\omega}{2\hbar})^2 -6x \frac{m\omega}{2\hbar} \right)
+$$
+$$
+\begin{aligned}
+\langle \hat{p}^2 \rangle &= -\hbar^2 \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \int_{-\infty}^\infty \left[ 4x^4 \left( \frac{m\omega}{2\hbar} \right)^2 e^{-\frac{m\omega}{\hbar} x^2} - 6x^2 \left( \frac{m\omega}{2\hbar} \right) e^{-\frac{m\omega}{\hbar} x^2} \right] dx \\[10pt]
+&= -\hbar^2 \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \left[ 4\left( \frac{m^2\omega^2}{4\hbar^2} \right) \int_{-\infty}^\infty x^4 e^{-\frac{m\omega}{\hbar} x^2} dx - 6\left( \frac{m\omega}{2\hbar} \right) \int_{-\infty}^\infty x^2 e^{-\frac{m\omega}{\hbar} x^2} dx \right] \\[10pt]
+&= -\hbar^2 \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \left[ \left( \frac{m^2\omega^2}{\hbar^2} \right) \left( \frac{3\sqrt{\pi}}{4} \left(\frac{\hbar}{m\omega}\right)^{5/2} \right) - \left( \frac{3m\omega}{\hbar} \right) \left( \frac{\sqrt{\pi}}{2} \left(\frac{\hbar}{m\omega}\right)^{3/2} \right) \right] \\[10pt]
+&= -\hbar^2 \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \left[ \frac{3\sqrt{\pi}}{4} \left(\frac{\hbar}{m\omega}\right)^{1/2} - \frac{3\sqrt{\pi}}{2} \left(\frac{\hbar}{m\omega}\right)^{1/2} \right] \\[10pt]
+&= -\hbar^2 \left( \frac{2 m^{3/2} \omega^{3/2}}{\sqrt{\pi} \hbar^{3/2}} \right) \left[ -\frac{3\sqrt{\pi}}{4} \left(\frac{\hbar}{m\omega}\right)^{1/2} \right] \\[10pt]
+&= \hbar^2 \left( \frac{2 m^{3/2} \omega^{3/2}}{\sqrt{\pi} \hbar^{3/2}} \right) \left( \frac{3\sqrt{\pi}}{4} \frac{\hbar^{1/2}}{m^{1/2}\omega^{1/2}} \right) \\[10pt]
+&= \frac{6}{4} \hbar^2 \left( \frac{m^{3/2} \omega^{3/2}}{\hbar^{3/2}} \right) \left( \frac{\hbar^{1/2}}{m^{1/2}\omega^{1/2}} \right) \\[10pt]
+&= \frac{3}{2} m \hbar \omega
+\end{aligned}
+$$
+Ahora la esperanza de $\hat{x}$ que es directamente cero por paridad, entonces
+$$
+\langle\hat{x}\rangle = 0
+$$
+calculando la esperanza de $\hat{x}^{2}$
+$$
+\begin{aligned}
+\langle\hat{x}^2\rangle &= \left( \frac{4m^3\omega^3}{\pi \hbar^3} \right)^{1/2} \int_{-\infty}^{\infty} x^4 e^{-\frac{m\omega}{\hbar} x^2} dx \\[10pt]
+&= \left( \frac{2 m^{3/2} \omega^{3/2}}{\sqrt{\pi} \hbar^{3/2}} \right) \left( \frac{3\sqrt{\pi}}{4} \left(\frac{\hbar}{m\omega}\right)^{5/2} \right) \\[10pt]
+&= \left( \frac{2 m^{3/2} \omega^{3/2}}{\sqrt{\pi} \hbar^{3/2}} \right) \left( \frac{3\sqrt{\pi} \hbar^{5/2}}{4 m^{5/2} \omega^{5/2}} \right) \\[10pt]
+&= \frac{6}{4} \left( \frac{\hbar^{5/2}}{\hbar^{3/2}} \right) \left( \frac{m^{3/2}}{m^{5/2}} \right) \left( \frac{\omega^{3/2}}{\omega^{5/2}} \right) \\[10pt]
+&= \frac{3}{2} \frac{\hbar}{m\omega}
+\end{aligned}
+$$
+Calculando el producto de las incertidumbres
+$$
+\begin{aligned}
+\Delta x \Delta p &= \sqrt{\langle \hat{x}^2 \rangle - \langle \hat{x} \rangle^2} \cdot \sqrt{\langle \hat{p}^2 \rangle - \langle \hat{p} \rangle^2} \\[10pt]
+&= \sqrt{\langle \hat{x}^2 \rangle} \cdot \sqrt{\langle \hat{p}^2 \rangle} \\[10pt]
+&= \sqrt{ \left( \frac{3\hbar}{2m\omega} \right) } \cdot \sqrt{ \left( \frac{3}{2}m\hbar\omega \right) } \\[10pt]
+&= \sqrt{ \frac{9\hbar^2}{4} } \\[10pt]
+&= \frac{3}{2}\hbar
+\end{aligned}
+$$
+Verificando el principio de incertidumbre para este estado del oscilador armónico
+$$
+\frac{3}{2}\hbar \geq \frac{\hbar}{2}  
+$$
+como $\frac{3}{2}$ es mayor que $\frac{1}{2}$ entonces se cumple el principio de incertidumbre para este estado.
