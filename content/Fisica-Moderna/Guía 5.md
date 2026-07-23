@@ -208,3 +208,63 @@ $$
 E_{0} = \frac{3}{2}\hbar \omega
 $$
 donde el nivel fundamental del oscilador está un "paso" más arriba que el oscilador armónico simétrico ya que el potencial "destruye" el estado fundamental simétrico $n=0$ y esto causa que todos los estados pares ya no sean posibles.
+
+### Problema 6
+![[Pasted image 20260723162658.png]]
+Nuestra nueva ecuación de onda $\hat{H}\psi=E\psi$ es:
+$$
+\begin{aligned}
+-\frac{\hbar^{2}}{2m} \frac{d^{2}}{dx^{2}} \psi + \left(\frac{1}{2}m\omega^{2}x^{2} - qE_{0}x\right) \psi &=E\psi \\[10pt]
+\end{aligned}
+$$
+Analizamos el potencial
+$$
+\begin{aligned}
+V(x) &= \frac{1}{2} m\omega^{2}x^{2} - qE_{0}x \\[10pt]
+&\text{completando cuadrados. NO HACERLO ASÍ, esto fue pura obstinación de mi parte.}\\[10pt]
+
+&=\frac{1}{2} m\omega^{2}x^{2} - \frac{2qE_{0}x \sqrt{ m }\omega}{2\sqrt{ m }\omega} + \frac{q^{2}E_{0}^{2}}{2m\omega^{2}} - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}} \\[10pt]
+
+&= \left(\frac{1}{\sqrt{2}}\sqrt{ m }\omega x-\frac{qE_{0}}{\sqrt{ 2m }\omega}\right)^{2} - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}} \\[10pt]
+&\text{Hacerlo de la siguiente manera: Completando cuadrados y factorizando}\\[10pt]
+&= \frac{1}{2} m\omega^{2} \left( x^{2}-\frac{2qE_{0}x}{m\omega^{2}} \right)\\[10pt]
+&=\frac{1}{2}m\omega^{2} \left( x^{2}-\frac{2qE_{0}x}{m\omega^{2}} +\frac{q^{2}E_{0}^{2}}{m^{2}\omega^{4}} - \frac{q^{2}E_{0}^{2}}{m^{2}\omega^{4}} \right) \\[10pt]
+&=\frac{1}{2} m\omega^{2} \left( x-\frac{qE_{0}}{m\omega^{2}}   \right)^{2} - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}
+
+\end{aligned}
+$$
+Con este cambio algebraico, el Hamiltoniano nos queda de la siguiente forma:
+$$
+\hat{H} = \frac{\hat{p}^{2}}{2m} + \frac{1}{2} m\omega^{2} \left( \hat{x}-\frac{qE_{0}}{m\omega^{2}}   \right)^{2} - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}
+$$
+esto directamente nos dice que tenemos el "cero" del potencial desplazado en $\frac{qE_{0}}{m\omega^{2}}$ ya que tenemos la forma de $(x-x_{0})^{2}$. Haciendo un análisis de autovalores:
+Definimos nuestro Hamiltoniano:
+$$
+\hat{H}_{o} = \frac{\hat{p}^{2}}{2m} + \frac{1}{2}m\omega^{2}(\hat{x}-x_{0})^{2}
+$$
+donde podemos definir $\hat{x}-x_{0} \equiv \hat{X}$. Donde $x_{0}$ al ser una constante, se mantienen las relaciones de conmutatividad de $[\hat{X},\hat{p}]=i\hbar$. Entonces, los autovalores del hamiltoniano $\hat{H}_{o}=\frac{\hat{p}^{2}}{2m} + \frac{1}{2}m\omega^{2}\hat{X}^{2}$ son los mismos autovalores que los del hamiltoniano del oscilador armónico:
+$$
+\begin{align}
+\hat{H}_{o}\psi &=E\psi \\[10pt]
+\hat{H}_{o}\psi &=\left( \hbar \omega\left( n+\frac{1}{2} \right) \right) \psi
+\end{align}
+$$
+Asimismo, podemos definir nuestro hamiltoniano original como: 
+$$
+\hat{H} = \hat{H}_{o} -\frac{q^{2}E_{0}^{2}}{2m\omega^{2}}
+$$
+Si ponemos esto en una ecuación de autovalores
+$$
+\begin{align}
+\hat{H} \psi &= (\hat{H}_{o}-\frac{q^{2}E_{0}^{2}}{2m\omega^{2}}) \psi \\[10pt]
+\hat{H}\psi &=(\hat{H}_{o}\psi - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}\psi) \\[10pt]
+\hat{H}\psi &= \left( \hbar \omega\left( n+\frac{1}{2} \right) \right) \psi- \frac{q^{2}E_{0}^{2}}{2m\omega^{2}} \psi \\[10pt] \\
+
+\hat{H}\psi &= \left( \hbar \omega\left( n+\frac{1}{2} \right) - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}\right) \ \psi 
+\end{align}
+$$
+con esto podemos ver que la energía es:
+$$
+E_{n} =  \left( \hbar \omega\left( n+\frac{1}{2} \right) - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}\right)
+$$
+la cual es prácticamente la misma energía del oscilador armónico cuántico, pero con un desplazamiento.
