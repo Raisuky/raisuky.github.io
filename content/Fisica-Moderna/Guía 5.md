@@ -138,3 +138,35 @@ $$
 \frac{3}{2}\hbar \geq \frac{\hbar}{2}  
 $$
 como $\frac{3}{2}$ es mayor que $\frac{1}{2}$ entonces se cumple el principio de incertidumbre para este estado.
+### Problema 4
+![[Pasted image 20260723144352.png]]
+
+Usando la energía del oscilador armónico clásico
+$$
+\begin{aligned}
+E&=\frac{1}{2}m\dot{x}^{2} + \frac{1}{2}kx^{2} \\[10pt]
+&=\frac{1}{2} m \dot{x}^{2} + \frac{1}{2} m \omega^{2} x^{2}
+\end{aligned}
+$$
+tomamos el caso de $E_{0}$ donde tenemos amplitud máxima $x=A$ 
+$$
+\begin{align}
+E_{0}&=\frac{1}{2} m\omega^{2}A^{2} = \frac{h\omega}{2}\\[10pt]  \\
+A &= \sqrt{ \frac{\hbar}{m\omega} }
+\end{align}
+$$
+Ahora, para determinar la probabilidad de encontrar la partícula en la región clásicamente prohibida. Recordemos que la ec. de onda para el estado fundamental de esta partícula es:
+$$
+\psi_{0} = \left( \frac{m\omega}{\pi \hbar} \right)^{1/4} e^{-m\omega x^{2}/2\hbar}
+$$
+la probabilidad de encontrar la partícula es
+$$
+\begin{aligned}
+P(|x|>A)&= \int_{-\infty}^{-A} \left(\frac{m\omega}{\pi \hbar}\right)^{1/2} e^{-m\omega x^{2}/\hbar} dx \, + \int_{A}^{\infty} \left(\frac{m\omega}{\pi \hbar}\right)^{1/2} e^{-m\omega x^{2}/\hbar} dx \\[10pt]
+&= 2 \left(\frac{m\omega}{\pi \hbar}\right)^{1/2} \int_{A}^{\infty} e^{-m\omega x^{2}/\hbar} \,dx \\[10pt]
+&=\frac{2}{\sqrt{ \pi }} \left( \frac{m\omega}{ \hbar} \right)^{1/2} \int_{1}^{\infty} \sqrt{ \frac{\hbar}{m\omega} }e^{-u^{2}} du\\[10pt]
+&= \frac{2}{\pi} \int_{1}^\infty e^{-u^{2}} du \\[10pt]
+&= \text{erfc(1)}
+\end{aligned}
+$$
+Nota: $\frac{2}{\pi} \int_{A}^\infty e^{-u^{2}} du = \text{erfc(A)}$ esa es la función error que se calcula numéricamente y en este caso es approx. $0.1573$.
