@@ -170,3 +170,41 @@ P(|x|>A)&= \int_{-\infty}^{-A} \left(\frac{m\omega}{\pi \hbar}\right)^{1/2} e^{-
 \end{aligned}
 $$
 Nota: $\frac{2}{\pi} \int_{A}^\infty e^{-u^{2}} du = \text{erfc(A)}$ esa es la función error que se calcula numéricamente y en este caso es approx. $0.1573$.
+
+### Problema 5
+![[Pasted image 20260723153821.png]]
+Comenzamos planteando la ec. de onda. Sabemos que la ec. de onda independiente del tiempo se define como: $\hat{H}\psi=E\psi$ tal que
+$$
+\begin{cases} 
+-\frac{\hbar^{2}}{2m} \frac{d^{2}}{dx^{2}} \psi(x) + \frac{1}{2} m\omega^{2}x^{2} \psi(x) = E \psi(x) & \text{si } x \geq 0 \\[10pt]
+-\frac{\hbar^{2}}{2m} \frac{d^{2}}{dx^{2}} \psi(x) + V(x)\psi(x) = E\psi(x) & \text{si } x < 0 
+\end{cases}
+$$
+Cuando nos ubicamos en $x=0$, la función de onda se enfrenta a un potencial infinitamente grande, por lo tanto la partícula no puede atravesar y eso nos dice que $\psi(0) =0$.
+Si hacemos el análisis en el infinito tenemos que el potencial $\lim_{ x \to \infty }\frac{1}{2}m\omega^{2}x^{2} = \infty$, lo que nos dice que la función de onda tiene que ser cero $\psi(x\rightarrow \infty) = 0$. Finalmente, esto nos dice que la partícula está en un estado ligado (confinada). 
+Con esto podemos definir las condiciones de contorno
+$$
+\begin{cases}
+\psi(0) = 0\\ \\
+\psi(x\rightarrow \infty) = 0
+\end{cases}
+$$
+Para determinar el subconjunto de soluciones que satisfacen las condiciones de contorno impuestas por la pared infinita primero debemos plantear la ec. de onda:
+$$
+\psi_{n}(x) \propto H_{n}(\alpha x) e^{-\alpha^{2}x^{2}/2}
+$$
+Si evaluamos en cero
+$$
+\psi_{n}(0) \propto H_{n}(0)e^{0} =0
+$$
+por la recurrencia y paridad de los polinomios de Hermite donde todos los términos pares dependen del primer término par $H_{0}$, donde ninguno de los polinomios de Hermite pares $H_{2k}$ son cero en el origen, así incumpliendo nuestra condición de contorno. Por lo tanto, podemos deducir/concluir que todos los estados pares de la función de onda son cero. Asimismo, el subconjunto de soluciones es $n=1,3,5,7\dots$ con $n=2k+1, \forall k=0, 1,2,3\dots$
+
+Ahora, para escribir los niveles de energía usamos la ec. de la energía del oscilador armónico cuántico $E=\hbar \omega\left( n+\frac{1}{2} \right)$:
+$$
+E_{k} = \hbar \omega\left( k+\frac{3}{2} \right),\, k=0, 1,2,3,\dots
+$$
+si tomamos $E_0$, obtenemos 
+$$
+E_{0} = \frac{3}{2}\hbar \omega
+$$
+donde el nivel fundamental del oscilador está un "paso" más arriba que el oscilador armónico simétrico ya que el potencial "destruye" el estado fundamental simétrico $n=0$ y esto causa que todos los estados pares ya no sean posibles.
