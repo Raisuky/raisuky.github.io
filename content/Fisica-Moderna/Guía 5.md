@@ -15,7 +15,7 @@ Analizamos el comportamiento asintótico de la función de onda en los extremos;
 
 Para determinar $A$ hay que usar $\int |\Psi|{^2}dx =1$
 $$
-A^2 \int_{-\infty}^\infty \left( 1-2 \sqrt{\frac{mw}{\hbar} } x\right)^4 e^{-\frac{m\omega}{\hbar}x^2} =1
+A^2 \int_{-\infty}^\infty \left( 1-2 \sqrt{\frac{mw}{\hbar} } x\right)^4 e^{-\frac{m\omega}{\hbar}x^2} dx =1
 $$
 Definimos $u=\sqrt{ \frac{m\omega}{\hbar} }x$ tal que $dx=\sqrt{\frac{\hbar}{m \omega} }du$
 $$
@@ -44,7 +44,7 @@ $$
 $$
 H_{0}(u)=1, 2H_{1}(u)=4u, H_{2}(u)=4u^2-2
 $$
-Despejamos $4u^2$ tal que: $4u^2=H_{2}(u)-2$ y reemplazamos en la ec. de onda tal que
+Despejamos $4u^2$ tal que: $4u^2=H_{2}(u)+2$ y reemplazamos en la ec. de onda tal que
 $$
 \Psi(x,0) =  \frac{1}{5} \left(\frac{m\omega}{\pi \hbar}\right)^{1/4} (H_{0}(u)-2H_{1}(u)+H_{2}(u)+2) e^{-\frac{m\omega}{2\hbar} x^2}
 $$
@@ -138,6 +138,7 @@ $$
 \frac{3}{2}\hbar \geq \frac{\hbar}{2}  
 $$
 como $\frac{3}{2}$ es mayor que $\frac{1}{2}$ entonces se cumple el principio de incertidumbre para este estado.
+
 ### Problema 4
 ![[Pasted image 20260723144352.png]]
 
@@ -207,7 +208,7 @@ si tomamos $E_0$, obtenemos
 $$
 E_{0} = \frac{3}{2}\hbar \omega
 $$
-donde el nivel fundamental del oscilador está un "paso" más arriba que el oscilador armónico simétrico ya que el potencial "destruye" el estado fundamental simétrico $n=0$ y esto causa que todos los estados pares ya no sean posibles.
+donde el nivel fundamental del oscilador está un "paso" más arriba que el oscilador armónico simétrico (estándar) ya que el potencial "destruye" el estado fundamental simétrico $n=0$ y esto causa que todos los estados pares ya no sean posibles.
 
 ### Problema 6
 ![[Pasted image 20260723162658.png]]
@@ -267,6 +268,7 @@ con esto podemos ver que la energía es:
 $$
 E_{n} =  \left( \hbar \omega\left( n+\frac{1}{2} \right) - \frac{q^{2}E_{0}^{2}}{2m\omega^{2}}\right)
 $$
+
 la cual es prácticamente la misma energía del oscilador armónico cuántico, pero con un desplazamiento.
 
 ### Problema 7
@@ -305,11 +307,23 @@ $$
 $$
 y los estados de energía se "mueven" individualmente.
 
+### Problema 8
+![[Pasted image 20260723191556.png]]
+
+Planteando la función de onda bidimensional $\Psi(x,y) = \Psi(r,\phi)$
+También, sabemos que la ec. de onda en $2$ dimensiones es
+$$
+\left(-\frac{\hbar^{2}}{2m}\nabla^{2}+V(\vec{r})\right)\Psi=E\Psi
+$$
+entonces tenemos que convertir el laplaciano a coordenadas polares, definiendo $r=\sqrt{ x^{2}+y^{2} }$ y $\phi=\arctan\left( \frac{y}{x} \right)$, entonces
+$$
+
+$$
 ### Problema 9
+![[Pasted image 20260723202346.png]]
+
 Comenzamos definiendo el hamiltoniano. Para ello debemos encontrar el potencial adecuado y así poder definir el hamiltoniano. 
-$\Rightarrow$ Buscamos determinar el potencial: Comenzando de la fuerza de Lorentz: $$F = e\left(E + \frac{v}{c}\times B\right)$$ Expresando $E$ y $B$ como los campos auxiliares: $$E = -\nabla\phi - \frac{1}{c}\partial_t A, \qquad B = \nabla\times A$$ $$F = e\left(-\nabla\phi - \frac{1}{c}\partial_t A + \frac{v}{c}\times(\nabla\times A)\right)$$ Donde: $$v\times(\nabla\times A) = \nabla(v\cdot A) - (v\cdot\nabla)A, \qquad \text{y} \quad \frac{dA}{dt} = \partial_t A + (v\cdot\nabla)A$$ $$\Rightarrow F = e\left(-\nabla\phi - \frac{1}{c}\frac{dA}{dt} + \frac{1}{c}\nabla(v\cdot A)\right) \qquad (*)$$ Para determinar las fuerzas generalizadas del potencial (porque tiene dependencia explícita de la velocidad) usamos el formalismo lagrangiano (Ecuaciones de Euler-Lagrange): $$(1)\quad \frac{d}{dt}\left(\frac{\partial U}{\partial \dot{q}_i}\right) - \frac{\partial U}{\partial q_i} = Q_i \quad \longleftarrow \text{Fuerza generalizada}$$ Comparando $(*)$ con $(1)$ y definimos $\frac{dA}{dt} = \nabla_v(A\cdot v)$ en el eje $x$: $$F_x = -\partial_x\left(e\phi - \frac{e}{c}v\cdot A\right) + \frac{d}{dt}\partial_{v_x}\left(e\phi - \frac{e}{c}v\cdot A\right)$$ Aquí, explícitamente el potencial es: $$U = e\phi - \frac{e}{c}(v\cdot A)$$ $\Rightarrow$ Podemos definir el Lagrangiano: $$L = \frac{1}{2}mv^2 - \left(e\phi - \frac{e}{c}(v\cdot A)\right)$$ En coordenadas generalizadas *(el término escalar $e\phi(q)$ no lleva el factor $\frac{1}{2}m$ ni va anidado en la suma cinética)*: $$L = \frac{1}{2}m\sum_i \dot{q}_i^2 - e\phi(q) + \frac{e}{c}\sum_i \dot{q}_i A_i(q)$$ Usando el momentum canónico (para encontrar el Hamiltoniano): $$p_i = \frac{\partial L}{\partial \dot{q}_i} = m\dot{q}_i + \frac{e}{c}A_i \qquad \longleftarrow \qquad p = mv + \frac{e}{c}A$$ Por definición del Hamiltoniano: $$H = \frac{1}{2m}\left(p - \frac{e}{c}A\right)^2 + e\phi$$ --- # Niveles de Landau Usando el Gauge de Weyl ($\phi = 0$): $$H = \frac{1}{2m}\left(p - \frac{e}{c}A\right)^2$$ Cuantizándolo: $$\hat{H} = \frac{1}{2m}\left(\hat{p} - \frac{e}{c}A\right)^2 = \frac{1}{2m}\left(-i\hbar\nabla - \frac{e}{c}A\right)^2$$ Ahora, para un electrón confinado en $(x,y)$ bajo un campo magnético $B = B\hat{z}$. Determinamos $E_n$: $$\Rightarrow \hat{H} = \frac{1}{2m}\left(\hat{p}_x - \frac{e}{c}A_x\right)^2 + \frac{1}{2m}\left(\hat{p}_y - \frac{e}{c}A_y\right)^2$$ Usando el Gauge de Landau: $$A = (-By, 0, 0), \qquad \nabla\times A = B\hat{z}$$ $$\hat{H} = \frac{1}{2m}\left[\left(\hat{p}_x + \frac{e}{c}By\right)^2 + \hat{p}_y^2\right]$$
-$$
-\frac{1}{2m}\left[-\hbar^2\partial_x^2 + \frac{e^2B^2y^2}{c^2} - i\frac{2e\hbar By}{c}\partial_x - \hbar^2\partial_y^2\right]\psi = E\psi
-$$
-Como $[\hat{H}, \hat{p}_x] = 0$, proponemos la solución $\psi(x,y) = e^{ikx}\phi(y)$: $$\frac{1}{2m}\left[\hbar^2k^2 + \frac{e^2B^2y^2}{c^2} + \frac{2e\hbar k B y}{c} - \hbar^2\partial_y^2\right]\phi = E\phi$$
-Agrupando los términos para formar un cuadrado de binomio: $$\frac{1}{2m}\left[-\hbar^2\partial_y^2 + \underbrace{y^2\frac{e^2B^2}{c^2} + 2y\hbar k\frac{Be}{c} + \hbar^2k^2}_{\left(\frac{yBe}{c}+\hbar k\right)^2}\right]\phi = E\phi$$ $$\left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2m}\left(\frac{yeB}{c}+\hbar k\right)^2\right]\phi = E\phi$$ Factorizando el término asociado a $y$: $$\left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2m}\left(\frac{eB}{c}\right)^2\left(y + \frac{\hbar k c}{Be}\right)^2\right]\phi = E\phi$$ $$\left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2}m\left(\frac{eB}{cm}\right)^2\left(y + \frac{\hbar k c}{Be}\right)^2\right]\phi = E\phi$$ Definimos una nueva variable de posición desplazada y la frecuencia de ciclotrón: $$y + \frac{\hbar k c}{Be} \equiv \bar{y}, \qquad \frac{eB}{cm} \equiv \omega_c$$ $$\Rightarrow \left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2}m\omega_c^2\bar{y}^2\right]\phi = E\phi$$ Reescribiendo con el operador momentum: $$\left[\frac{\hat{p}_{\bar{y}}^2}{2m} + \frac{1}{2}m\omega_c^2\bar{y}^2\right]\phi = E\phi$$ Esta es la ecuación exacta de un Oscilador Armónico Cuántico centrado en $\bar{y}$. Finalmente, el espectro de energía es: $$E_n = \hbar\omega_c\left(n + \frac{1}{2}\right)$$
+Tal que:
+$\Rightarrow$ Buscamos determinar el potencial: Comenzando de la fuerza de Lorentz: $$F = e\left(E + \frac{v}{c}\times B\right)$$ Expresando $E$ y $B$ como los campos auxiliares: $$E = -\nabla\phi - \frac{1}{c}\partial_t A, \qquad B = \nabla\times A$$ $$F = e\left(-\nabla\phi - \frac{1}{c}\partial_t A + \frac{v}{c}\times(\nabla\times A)\right)$$ Donde: $$v\times(\nabla\times A) = \nabla(v\cdot A) - (v\cdot\nabla)A, \qquad \text{y} \quad \frac{dA}{dt} = \partial_t A + (v\cdot\nabla)A$$ $$\Rightarrow F = e\left(-\nabla\phi - \frac{1}{c}\frac{dA}{dt} + \frac{1}{c}\nabla(v\cdot A)\right) \qquad (*)$$ Para determinar las fuerzas generalizadas del potencial (porque tiene dependencia explícita de la velocidad) usamos el formalismo lagrangiano (Ecuaciones de Euler-Lagrange): $$(1)\quad \frac{d}{dt}\left(\frac{\partial U}{\partial \dot{q}_i}\right) - \frac{\partial U}{\partial q_i} = Q_i \quad \longleftarrow \text{Fuerza generalizada}$$ Comparando $(*)$ con $(1)$ y definimos $\frac{dA}{dt} = \nabla_v(A\cdot v)$ en el eje $x$: $$F_x = -\partial_x\left(e\phi - \frac{e}{c}v\cdot A\right) + \frac{d}{dt}\partial_{v_x}\left(e\phi - \frac{e}{c}v\cdot A\right)$$ Aquí, explícitamente el potencial es: $$U = e\phi - \frac{e}{c}(v\cdot A)$$ $\Rightarrow$ Podemos definir el Lagrangiano: $$L = \frac{1}{2}mv^2 - \left(e\phi - \frac{e}{c}(v\cdot A)\right)$$ $$L = \frac{1}{2}m\sum_i \dot{q}_i^2 - e\phi(q) + \frac{e}{c}\sum_i \dot{q}_i A_i(q)$$ Usando el momentum canónico (para encontrar el Hamiltoniano): $$p_i = \frac{\partial L}{\partial \dot{q}_i} = m\dot{q}_i + \frac{e}{c}A_i \qquad \longleftarrow \qquad p = mv + \frac{e}{c}A$$ Por definición del Hamiltoniano: $$H = \frac{1}{2m}\left(p - \frac{e}{c}A\right)^2 + e\phi$$
+#### Niveles de Landau 
+Usando el Gauge de Weyl ($\phi = 0$): $$H = \frac{1}{2m}\left(p - \frac{e}{c}A\right)^2$$ Cuantizándolo: $$\hat{H} = \frac{1}{2m}\left(\hat{p} - \frac{e}{c}A\right)^2 = \frac{1}{2m}\left(-i\hbar\nabla - \frac{e}{c}A\right)^2$$ Ahora, para un electrón confinado en $(x,y)$ bajo un campo magnético $B = B\hat{z}$. Determinamos $E_n$: $$\Rightarrow \hat{H} = \frac{1}{2m}\left(\hat{p}_x - \frac{e}{c}A_x\right)^2 + \frac{1}{2m}\left(\hat{p}_y - \frac{e}{c}A_y\right)^2$$ Usando el Gauge de Landau: $$A = (-By, 0, 0), \qquad \nabla\times A = B\hat{z}$$ $$\hat{H} = \frac{1}{2m}\left[\left(\hat{p}_x + \frac{e}{c}By\right)^2 + \hat{p}_y^2\right]$$ *(Nota: Al expandir el binomio cuadrado falta el factor 2 en el término cruzado, y $\hat{p}_y^2 = -\hbar^2\partial_y^2$, no $+\partial_y^2$)* $$\frac{1}{2m}\left[-\hbar^2\partial_x^2 + \frac{e^2B^2y^2}{c^2} - i\frac{2e\hbar By}{c}\partial_x - \hbar^2\partial_y^2\right]\psi = E\psi$$ Como $[\hat{H}, \hat{p}_x] = 0$, proponemos la solución $\psi(x,y) = e^{ikx}\phi(y)$: $$\frac{1}{2m}\left[\hbar^2k^2 + \frac{e^2B^2y^2}{c^2} + \frac{2e\hbar k B y}{c} - \hbar^2\partial_y^2\right]\phi = E\phi$$ Agrupando los términos para formar un cuadrado de binomio: $$\frac{1}{2m}\left[-\hbar^2\partial_y^2 + \underbrace{y^2\frac{e^2B^2}{c^2} + 2y\hbar k\frac{Be}{c} + \hbar^2k^2}_{\left(\frac{yBe}{c}+\hbar k\right)^2}\right]\phi = E\phi$$ $$\left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2m}\left(\frac{yeB}{c}+\hbar k\right)^2\right]\phi = E\phi$$ Factorizando el término asociado a $y$: $$\left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2m}\left(\frac{eB}{c}\right)^2\left(y + \frac{\hbar k c}{Be}\right)^2\right]\phi = E\phi$$ $$\left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2}m\left(\frac{eB}{cm}\right)^2\left(y + \frac{\hbar k c}{Be}\right)^2\right]\phi = E\phi$$ Definimos una nueva variable de posición desplazada y la frecuencia de ciclotrón: $$y + \frac{\hbar k c}{Be} \equiv \bar{y}, \qquad \frac{eB}{cm} \equiv \omega_c$$ $$\Rightarrow \left[-\frac{\hbar^2}{2m}\partial_y^2 + \frac{1}{2}m\omega_c^2\bar{y}^2\right]\phi = E\phi$$ Reescribiendo con el operador momentum: $$\left[\frac{\hat{p}_{\bar{y}}^2}{2m} + \frac{1}{2}m\omega_c^2\bar{y}^2\right]\phi = E\phi$$ Esta es la ecuación exacta de un Oscilador Armónico Cuántico centrado en $\bar{y}$. Finalmente, el espectro de energía es: $$E_n = \hbar\omega_c\left(n + \frac{1}{2}\right)$$
